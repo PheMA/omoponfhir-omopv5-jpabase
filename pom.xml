@@ -31,6 +31,9 @@
 		<hibernate_version>5.3.1.Final</hibernate_version>
 		<spring_version>5.0.8.RELEASE</spring_version>
 		<hibernate_version>5.3.1.Final</hibernate_version>
+		<bintray.subject>phema</bintray.subject>
+		<bintray.repo>maven</bintray.repo>
+		<bintray.package>omoponfhir-omopv5-jpabase</bintray.package>
 	</properties>
 
 	<dependencies>
@@ -113,4 +116,10 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>bintray-phema-maven</id>
+			<url>https://api.bintray.com/maven/${bintray.subject}/${bintray.repo}/${bintray.package}/;publish=1</url>
+		</repository>
+	</distributionManagement>
 </project>
